@@ -15,6 +15,8 @@ cuda=11.1
 
 opencv-python=4.7.0.68
 
+timm (for Swin Transformer)
+
 tqdm
 
 matplotlib
