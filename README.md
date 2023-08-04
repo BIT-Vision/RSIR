@@ -27,4 +27,4 @@ The real-world spike dataset:
 # Acknowledgement
 This implementations are inspired by following projects:
 
--[EMVD] (https://github.com/Baymax-chen/EMVD)
+- [EMVD] (https://github.com/Baymax-chen/EMVD)
