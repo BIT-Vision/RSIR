@@ -1,10 +1,9 @@
 # RSIR
 **R**ecurrent **S**pike-based **I**mage **R**estoration under General Illumination (ACM MM 2023)
 
-RSIR is a fully supervised learning algorithm based on spike camera noise modeling and data synthesis.
+RSIR is a fully supervised learning algorithm based on noise modeling and data synthesis for spike camera.
 It is used for reconstructing clean images from high-density spike stream captured under different lighting conditions.
 
-# Overview
 This is an official implementation of RSIR with Pytorch.
 
 # Requirements
