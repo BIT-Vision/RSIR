@@ -26,3 +26,7 @@ The simulated spike dataset:
 The real-world spike dataset:
 # Acknowledgement
 This implementations are inspired by following projects:
+
+\begin{itemize}
+    \item [EMVD] (\url{https://github.com/Baymax-chen/EMVD})
+\end{itemize}
