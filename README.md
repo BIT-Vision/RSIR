@@ -33,7 +33,7 @@ The pretrained NIM module:[https://drive.google.com/file/d/17wP3isQpRTLQw4DmxlXl
 
 The best model:[https://drive.google.com/file/d/1i05zUfglBZFhrj3iXS0oWn0UDIFzjrZr/view?usp=drive_link]
 
-#Usage
+# Usage
 ## test
 For test our model directly, please download checkpoint and data form the google drive first.
 Then run `test.py` after making sure all from the `config.py` are correct. 
