@@ -16,7 +16,6 @@ import cv2
 import warnings
 warnings.filterwarnings('ignore')
 
-import utils
 from dataset import *
 import config      as cfg
 import structure
@@ -55,11 +54,6 @@ def initialize():
 	# 	s = input('Are you sure training the model from scratch? y/n \n')
 	# 	if not (s=='y'):
 	# 		return
-
-
-def duplicate_output_to_log(name):
-	tee = utils.Tee(name)
-	return tee
 
 
 def train(in_data, gt_raw_data, q, nd, nl, model, loss, device, optimizer):
