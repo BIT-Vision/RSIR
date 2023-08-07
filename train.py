@@ -16,7 +16,6 @@ import cv2
 import warnings
 warnings.filterwarnings('ignore')
 
-from dataset import *
 import config      as cfg
 import structure
 import netloss
