@@ -21,6 +21,8 @@ tqdm
 
 matplotlib
 
+tensorboardX
+
 # Dataset
 The simulated spike dataset:
 
