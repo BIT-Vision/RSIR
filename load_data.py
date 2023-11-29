@@ -2,22 +2,11 @@ import os
 import cv2
 import numpy as np
 import torch
+from torch.utils.data import Dataset
 
 import config as cfg
 from dataset import *
-from torch.utils.data import Dataset
-
-
-def load_spike_numpy(path: str) -> (np.ndarray, np.ndarray):
-    '''
-    Load a spike sequence with it's tag from prepacked `.npz` file.\n
-    The sequence is of shape (`length`, `height`, `width`) and tag of
-    shape (`height`, `width`).
-    '''
-    data = np.load(path)
-    seq, tag, length = data['seq'], data['tag'], int(data['length'])
-    seq = np.array([(seq[i // 8] >> (i & 7)) & 1 for i in range(length)])
-    return seq, tag, length
+from utils import load_spike_numpy
 
 
 def generate_file_list(tr_or_ev):
