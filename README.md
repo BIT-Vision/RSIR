@@ -29,7 +29,7 @@ For test our model directly, please download checkpoint and data form the [Googl
 Then run `test.py` after making sure all from the `config.py` are correct. 
 
 ## train
-If you want to retrain our model to adjust your own camera, please calibrate three uniform light first, and follow the details of our paper.
+If you want to retrain our model to adjust your own camera, please calibrate three uniform light first, following the details of our paper.
 Retrain NIM module for the best performace or you can also use `nim.pt` with new $D_{dark}$, $Q_r$ and $R$ calculated by `cal_para` function.
 The run `train.py` after making sure all from the `config.py` are correct.
 
