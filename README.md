@@ -23,12 +23,9 @@ matplotlib
 
 tensorboardX
 
-# Additional download
-You can download the dataset and model checkpoint from [Google Drive](https://drive.google.com/drive/folders/1oYGCuHLqJ8hH6kpQuyH0uDddhz1NefKz?usp=drive_link)
-
 # Usage
 ## test
-For test our model directly, please download checkpoint and data form the google drive first.
+For test our model directly, please download checkpoint and data form the [Google Drive](https://drive.google.com/drive/folders/1oYGCuHLqJ8hH6kpQuyH0uDddhz1NefKz?usp=drive_link) first.
 Then run `test.py` after making sure all from the `config.py` are correct. 
 
 ## train
