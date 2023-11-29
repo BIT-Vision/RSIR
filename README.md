@@ -23,15 +23,8 @@ matplotlib
 
 tensorboardX
 
-# Dataset
-The simulated spike dataset:
-
-The real-world spike dataset:
-
-# Checkpoint
-The pretrained NIM module:[https://drive.google.com/file/d/17wP3isQpRTLQw4DmxlXl08aQOmr6wifF/view?usp=drive_link]
-
-The best model:[https://drive.google.com/file/d/1i05zUfglBZFhrj3iXS0oWn0UDIFzjrZr/view?usp=drive_link]
+# Additional download
+You can download the dataset and model checkpoint from [Google Drive](https://drive.google.com/drive/folders/1oYGCuHLqJ8hH6kpQuyH0uDddhz1NefKz?usp=drive_link)
 
 # Usage
 ## test
