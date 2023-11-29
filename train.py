@@ -49,12 +49,6 @@ def initialize():
 		os.mkdir(cfg.log_dir)
 
 
-	# if cfg.checkpoint == None:
-	# 	s = input('Are you sure training the model from scratch? y/n \n')
-	# 	if not (s=='y'):
-	# 		return
-
-
 def train(in_data, gt_raw_data, q, nd, nl, model, loss, device, optimizer):
 	l1loss_list = []
 	l1loss_total = 0
@@ -120,7 +114,6 @@ def evaluate(model, q, nd, nl, psnr, writer, iter, val_loader):
 
 				# input = torch.cat([ft0_fusion, ft1], dim=1)
 
-				# fpn_denoise, gamma, fusion_out, denoise_out, omega, refine_out = model(input, coeff_a, coeff_b, q, nd, nl)
 				fpn_denoise, img_true, fusion_out, denoise_out, refine_out, ft_denoise_out_d0, fgt_d0 = model(input, fgt, q, nd, nl)
 				fgt = F.pad(fgt, [0, 0, 3, 3], mode="reflect")
 				ft0_fusion_data = fusion_out[:, :, 3:253, :]
@@ -130,8 +123,6 @@ def evaluate(model, q, nd, nl, psnr, writer, iter, val_loader):
 				frame_psnr_fusion += psnr(fusion_out[:, :, 3:253, :], fgt[:, :, 3:253, :])
 				frame_psnr_denoise += psnr(denoise_out[:, :, 3:253, :], fgt[:, :, 3:253, :])
 				frame_psnr_refine += psnr(refine_out[:, :, 3:253, :], fgt[:, :, 3:253, :])
-			# refine_out_ill = torch.div(refine_out, torch.clamp(model_ill(refine_out), 0.001, 1))
-			# frame_psnr_ill = psnr(torch.clamp(refine_out_ill, 0, 1), fgt)
 			cv2.imwrite("./result/fpn_denoise.png", np.transpose(fpn_denoise[:, :, 3:253, :].detach().cpu().numpy()[0], [1, 2, 0]) * 255.0)
 			cv2.imwrite("./result/img_true.png", np.transpose(img_true.detach().cpu().numpy()[0], [1, 2, 0]) * 255.0)
 			cv2.imwrite("./result/fusion_out.png", np.transpose(fusion_out[:, :, 3:253, :].detach().cpu().numpy()[0], [1, 2, 0]) * 255.0)
@@ -280,9 +271,6 @@ def main():
 		start_iter = checkpoint['iter']
 		model.load_state_dict(checkpoint['model'])
 		optimizer.load_state_dict(checkpoint['optimizer'])
-		# best_psnr = checkpoint['best_psnr']
-		# optimizer_ill.load_state_dict(checkpoint['optimizer_ill'])
-		# print("the best PSNR is:{}".format(checkpoint['best_psnr']))
 	iter = start_iter
 
 	if torch.cuda.is_available() and ngpu > 1:
