@@ -30,8 +30,8 @@ Then run `test.py` after making sure all from the `config.py` are correct.
 
 ## train
 If you want to retrain our model to adjust your own camera, please calibrate three uniform light first, following the details of our paper.
-Retrain NIM module for the best performace or you can also use `nim.pt` with new $D_{dark}$, $Q_r$ and $R$ calculated by `cal_para` function.
-The run `train.py` after making sure all from the `config.py` are correct.
+Then run `data_generation.py` to synthesize the spike data and run `train.py` after making sure all from the `config.py` are correct.
+You can retrain NIM module for the best performace or just use `nim.pt` with new $D_{dark}$, $Q_r$ and $R$ calculated by `cal_para` function.
 
 # Acknowledgement
 This implementations are inspired by following projects:
